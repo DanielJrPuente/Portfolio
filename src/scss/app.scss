@@ -1,3 +1,6 @@
+@use 'variables' as v;
+@use 'Header';
+
 *{
     margin : 0;
     padding: 0;
@@ -6,5 +9,9 @@
 }
 
 body{
-    background-color: green;
+    background-color: v.$primary-color;
+    font-family: v.$princypal-font;
+    font-size: 1.1rem;
+    color: v.$white;
+    transition: all .4s ease-in-out;
 }
