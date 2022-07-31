@@ -1,8 +1,9 @@
-@use 'variables' as v;
+@use '../variables/variables' as v;
 
 .sec1{
     display: none;
     transform: translateY(0) scale(1);
+    background-color: rgb(137, 196, 48);
 }
 
 //controls
@@ -23,6 +24,16 @@
         i{
             color: v.$white;
         }
+        display: block;
+        animation: scaleAnim .5s ease-in-out;
+        @keyframes scaleAnim {
+        0%{
+            transform: translateY(-100%) scaleY(0);
+        }
+        100%{
+            transform: translateY(0%) scaleY(1);
+        }
+    }
     }
     .control{
         padding: 1rem;

@@ -1,45 +1,8 @@
 @use 'variables' as v;
+
 @use 'Header';
-
-*{
-    margin : 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-}
-
-body{
-    background-color: v.$primary-color;
-    font-family: v.$princypal-font;
-    font-size: 1.1rem;
-    color: v.$white;
-    transition: all .4s ease-in-out;
-}
-
-a{
-    display: inline-block;
-    text-decoration: none;
-    color: inherit;
-    font-family: inherit;
-
-}
-header{
-    height: 100vh;
-    color: v.$white;
-    overflow: hidden;
-}
-
-section{
-    min-height: 100vh;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding: 3rem 18rem;
-}
-
-.section {
-    transform: translateY(-100%);
-    transition: all .4s ease-in-out;
-    background-color: v.$primary-color;
-}
+@use 'aboutSec';
+@use 'portfolioSec';
+@use 'blogsSec';
+@use 'contacSec';
+@use 'base';
