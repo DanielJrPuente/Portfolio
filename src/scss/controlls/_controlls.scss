@@ -1,0 +1,51 @@
+@use '../variables/variables' as v;
+
+//controls
+
+.controlls{
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    right: 3%;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-50%);
+    align-items: center;
+    justify-content: center;
+    .active-btn{
+        background-color: v.$secundary-color !important;
+        transition: all .4s ease-in-out;
+        i{
+            color: v.$white;
+        }
+        display: block;
+        animation: scaleAnim .5s ease-in-out;
+        @keyframes scaleAnim {
+        0%{
+            transform: translateY(-100%) scaleY(0);
+        }
+        100%{
+            transform: translateY(0%) scaleY(1);
+        }
+    }
+    }
+    .control{
+        padding: 1rem;
+        cursor: pointer;
+        background-color: v.$grey-4;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: .7rem 0;
+        box-shadow: v.$box-shadow-1;
+    }
+    i{
+        font-size: 1.2rem;
+        color: v.$grey-2;
+        pointer-events: none;
+
+    }
+}

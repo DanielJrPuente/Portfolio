@@ -3,55 +3,48 @@
 .sec1{
     display: none;
     transform: translateY(0) scale(1);
-    background-color: rgb(137, 196, 48);
+    
 }
 
-//controls
-
-.controlls{
-    position: fixed;
-    z-index: 10;
-    top: 50%;
-    right: 3%;
-    display: flex;
-    flex-direction: column;
-    transform: translateY(-50%);
-    align-items: center;
-    justify-content: center;
-    .active-btn{
-        background-color: v.$secundary-color !important;
-        transition: all .4s ease-in-out;
-        i{
-            color: v.$white;
-        }
-        display: block;
-        animation: scaleAnim .5s ease-in-out;
-        @keyframes scaleAnim {
-        0%{
-            transform: translateY(-100%) scaleY(0);
-        }
-        100%{
-            transform: translateY(0%) scaleY(1);
-        }
-    }
-    }
-    .control{
-        padding: 1rem;
-        cursor: pointer;
-        background-color: v.$grey-4;
-        width: 55px;
-        height: 55px;
-        border-radius: 50%;
+.header-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    .left-header{
         display: flex;
-        justify-content: center;
         align-items: center;
-        margin: .7rem 0;
-        box-shadow: v.$box-shadow-1;
+        position: relative;
+        .h-shape{
+            transition: all .4s ease-in-out;
+            width: 65%;
+            height: 100%;
+            background-color: v.$secundary-color;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            clip-path: polygon(0 0, 46% 0 ,79% 100%, 0% 100%);
+        }
+        .image{
+            border-radius: v.$br-sm-2;
+            height: 90%;
+            width: 68%;
+            margin-left: 4rem;
+            background-color: v.$black;
+            transition: all .4s ease-in-out;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all .4s ease-in-out;
+                filter: grayscale(100%);
+                &:hover{
+                    filter: grayscale(0);
+                }
+            }
+        }
     }
-    i{
-        font-size: 1.2rem;
-        color: v.$grey-2;
-        pointer-events: none;
-
+    .right-header{
+        
     }
 }
