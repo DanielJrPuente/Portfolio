@@ -77,4 +77,17 @@
             }
         }
     }
+    .left-about{
+        padding-right: 5rem;
+        p{
+            line-height: 2rem;
+            padding: 1rem;
+            color: v.$grey-1;
+        }
+        h4{
+            font-size: 4rem;
+            text-transform: uppercase;
+            
+        }
+    }
 }

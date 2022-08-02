@@ -228,6 +228,18 @@
   height: 2px;
   background-color: #2a2e35;
 }
+.about-container .left-about {
+  padding-right: 5rem;
+}
+.about-container .left-about p {
+  line-height: 2rem;
+  padding: 1rem;
+  color: #dbe1e8;
+}
+.about-container .left-about h4 {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
 
 .sec3 {
   display: none;
